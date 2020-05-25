@@ -19,6 +19,7 @@ num_testset=1;
 %% testing conditions (the ones that are the same in all the tests)
 num_providers=[60,20,15];
 adaptation_gain=50;
+advanced=true;
 
 %% initialize variables for storage
 total_requests=zeros(num_tests,1); 
@@ -43,7 +44,7 @@ for j=1:num_tests
     ambulance_prob=0.15+rand*(0.30-0.15);
     type_of_requests=[1-ambulance_prob-drug_prob,drug_prob,ambulance_prob];    
   %RUN TAS
-    res=run_TAS(requests_profile,type_of_requests,num_providers,adaptation_gain);
+    res=run_TAS(requests_profile,type_of_requests,num_providers,adaptation_gain,advanced);
   %STORE TEST OUTCOME
     total_num_fails(j,jj)=res.fail; %number of times a service has failed a request
     avg_num_attempts(j,jj)=(sum(requests_profile)+total_num_fails(j))/sum(requests_profile);
