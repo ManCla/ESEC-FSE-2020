@@ -31,6 +31,7 @@ max_avg_num_attempts=zeros(num_tests+1,num_testset);
 max_fails=zeros(num_tests+1,num_testset);
 
 %% run tests
+disp(['-------------- STARTING EXECUTION OF TESTS --------------'])
 %testset loop
 for jj=1:num_testset
 %tests loop
@@ -50,20 +51,25 @@ for j=1:num_tests
     avg_num_attempts(j,jj)=(sum(requests_profile)+total_num_fails(j))/sum(requests_profile);
     max_avg_num_attempts(j+1,jj)=max(avg_num_attempts(j,jj),max_avg_num_attempts(j,jj));
     max_fails(j+1,jj)=max(total_num_fails(j,jj),max_fails(j,jj));
+    
+    % if performing only one testset disply a progress update 
+    if num_testset==1 && (mod(j,100)==0)
+        disp(['I have executed ', int2str(j),' tests'])
+    end
 end %main test loop
 if num_testset>1
     disp(['I have executed test set number:',int2str(jj)])
 end
 end %testset loop
 
+disp(['-------------- FINISHED EXECUTION OF TESTS --------------'])
 
 %% analysis and plotting for only one test set
 if num_testset==1
     
-    disp(['-----------------------------------------------------'])
-    disp(['ST: The worst case average number of attempts is:',num2str(max(avg_num_attempts))])
-    disp(['MC: The sampled mean of the average number of attempts is:',num2str(mean(avg_num_attempts))])
-    disp(['MC: The std of the sampled mean average number of attempts is:',num2str(sqrt(var(avg_num_attempts)/num_tests))])
+    disp(['ST : The worst case average number of attempts is:',num2str(max(avg_num_attempts))])
+    disp(['MC : The sampled mean of the average number of attempts is:',num2str(mean(avg_num_attempts))])
+    disp(['MC : The std of the sampled mean average number of attempts is:',num2str(sqrt(var(avg_num_attempts)/num_tests))])
 
     figure
     histogram(avg_num_attempts,40)
@@ -88,8 +94,6 @@ if num_testset==1
                 *(length(excedances)/num_tests);
     disp(['EVT: probability of a future worst case ', ...
           'worse than what observed so far:',num2str(evt_max_prob)])
-
-    disp(['-----------------------------------------------------'])
 
 end
 
