@@ -83,9 +83,9 @@ for i=1:num_time_steps
     end
     
     %-------run adaptation algorithm
-    analysis_adaptation=adaptation(analysis_success, analysis_fail,analysis_adaptation,gain); 
-    drug_adaptation=adaptation(drug_success, drug_fail,drug_adaptation,gain); 
-    ambulance_adaptation=adaptation(ambulance_success, ambulance_fail,ambulance_adaptation,gain);
+    analysis_adaptation=adaptation(analysis_success, analysis_fail,analysis_adaptation,gain,advanced); 
+    drug_adaptation=adaptation(drug_success, drug_fail,drug_adaptation,gain,advanced); 
+    ambulance_adaptation=adaptation(ambulance_success, ambulance_fail,ambulance_adaptation,gain,advanced);
     
     %-------re-distribute failed requests
     tmp=ctrl_action(sum(analysis_fail),analysis_adaptation);

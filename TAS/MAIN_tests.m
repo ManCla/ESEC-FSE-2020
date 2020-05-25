@@ -19,7 +19,7 @@ num_testset=1;
 %% testing conditions (the ones that are the same in all the tests)
 num_providers=[60,20,15];
 adaptation_gain=50;
-advanced=true;
+advanced=false;
 
 %% initialize variables for storage
 total_requests=zeros(num_tests,1); 
