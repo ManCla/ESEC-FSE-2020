@@ -29,20 +29,14 @@ end
 num_time_steps=length(requests_profile); %define number of time steps to be simulated
 
 %% initialize services
-% analysis services
-analysis_providers=initialize_services(num_providers(1));
-% drug services
-drug_providers=initialize_services(num_providers(2));
-% ambulance services
-ambulance_providers=initialize_services(num_providers(3));
+analysis_providers=initialize_services(num_providers(1));     % analysis services
+drug_providers=initialize_services(num_providers(2));         % drug services
+ambulance_providers=initialize_services(num_providers(3));    % ambulance services
 
 %% initialize controllers
-% analysis services
-analysis_adaptation=initialize_adaptation(num_providers(1));
-% drug services
-drug_adaptation=initialize_adaptation(num_providers(2));
-% ambulance services
-ambulance_adaptation=initialize_adaptation(num_providers(3));
+analysis_adaptation=initialize_adaptation(num_providers(1));  % analysis services
+drug_adaptation=initialize_adaptation(num_providers(2));      % drug services
+ambulance_adaptation=initialize_adaptation(num_providers(3)); % ambulance services
 
 %% initialize loop variables
 drug_requests = zeros(num_providers(2),1);      %number of requests forwarded to drug services at each step
@@ -51,7 +45,7 @@ ambulance_requests = zeros(num_providers(3),1); %number of requests forwarded to
 %storage for statistics
 successfull_requests=0;
 failed_requests=0;
-%those are initialized only if a single test is being performed
+%next ones are needed only if a single test is being performed
 if single_test
     analysis_load_incoming=zeros(num_providers(1),num_time_steps);
     analysis_load_processing=zeros(num_providers(1),num_time_steps);
@@ -112,7 +106,7 @@ for i=1:num_time_steps
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%
     successfull_requests=successfull_requests+all_good+sum(drug_success)+sum(ambulance_success);
     failed_requests=failed_requests+sum(analysis_fail)+sum(drug_fail)+sum(ambulance_fail);
-    
+    %next ones are needed only if a single test is being performed
     if (single_test)
         %store data about different services
         for ii=1:num_providers(1) %loop over analysis providers
@@ -139,13 +133,14 @@ for i=1:num_time_steps
                 ambulance_load_processing(ii,i)=-1;
             end
         end
-    end % if single test
+    end % end if single test
 
 end %end main loop
 
 %% extract relevant statistics
 result.success=successfull_requests;
 result.fail=failed_requests;
+%next ones are needed only if a single test is being performed
 if (single_test)
     result.analysis_load_incoming=analysis_load_incoming;
     result.analysis_load_processing=analysis_load_processing;
