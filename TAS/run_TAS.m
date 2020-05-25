@@ -4,15 +4,23 @@
 %   - requests_profile = a vector defining the number of requests arriving 
 %                        at each time step. If set to '0' then a random
 %                        number of requests is generated at each time step.
-%   - num_services     = a vector defining the number of provider per each
+%   - type_of_requests = a vector defining the probability of different
+%                        types of request [none, drug, ambulance]
+%   - num_providers    = a vector defining the number of provider per each
 %                        service [analysis, drugs, ambulance]
-%   - [single_test]    = a boolean that should be true when only one test
-%                        is being executed. If true also the data about the 
-%                        load of the different services are stored
+%   - gain             = gain of the adaptation strategy, used for
+%                        aggressive or soft adaptation strategy
+%   - advanced         = boolean for using advanced adaptation strategy or
+%                        not (active identification of unavailable 
+%                        providers)
+%   - [single_test]    = a (optional) boolean that should be true when only 
+%                        one test (not testset!) is being executed. If true
+%                        also the data about the load of the different 
+%                        services are stored.
 %OUTPUTS:
 % 
 
-function result = run_TAS(requests_profile,type_of_requests,num_providers,gain,single_test)
+function result = run_TAS(requests_profile,type_of_requests,num_providers,gain,advanced,single_test)
 
 if ~exist('single_test') %check whether you will execute one or many tests
     single_test=false;
