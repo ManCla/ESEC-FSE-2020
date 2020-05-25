@@ -1,10 +1,5 @@
 % funciton that decised whether the analyzed requests are of type drug or
 % ambulance.
-%
-%INPUTS:
-%
-%OUTPUTS:
-%
 
 function [all_good, drug_requests, ambulance_requests]=pick_type_of_requests(num_requests,type_of_requests)
 
