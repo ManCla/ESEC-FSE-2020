@@ -15,9 +15,11 @@ This part of the artifact requires two steps: one runnning the simulation of the
  * In matlab run the script MAIN_tests.m in the /TAS/code directory. This, apart from displaying two plots sumarizing the results, will generate the file maxima_growth_plot.csv in the /TAS/fig directory. 
  * To generate figure 3 from the paper you can now run the makefile in the directory /TAS/fig (latex and tikz are required).
 
-
+## SAVE case study
 
 
 [1] https://en.wikipedia.org/wiki/Scenario_optimization
+
 [2] http://homepage.lnu.se/staff/daweaa/TAS/tas.htm
+
 [3] http://www.martinamaggio.com/main/publications/seams17/
