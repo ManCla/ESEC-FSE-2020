@@ -64,6 +64,19 @@ end %testset loop
 
 disp(['-------------- FINISHED EXECUTION OF TESTS --------------'])
 
+%% generate .csv for plotting
+maxima_growth=[1,avg_num_attempts(1)];
+for k=2:length(avg_num_attempts)
+    if maxima_growth(end)<avg_num_attempts(k)
+        maxima_growth=[maxima_growth;
+                       k, avg_num_attempts(k)];
+    end
+end
+%this final addition is only for estetics in the tikz plot ()
+maxima_growth=[maxima_growth;
+               k+2, maxima_growth(end)+3];
+csvwrite('../fig/maxima_growth_plot.csv',maxima_growth);
+
 %% analysis and plotting for only one test set
 if num_testset==1
     
@@ -96,7 +109,6 @@ if num_testset==1
           'worse than what observed so far:',num2str(evt_max_prob)])
 
 end
-
 
 %% ploting for many testset
 if num_testset>1
