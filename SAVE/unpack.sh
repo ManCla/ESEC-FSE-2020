@@ -2,6 +2,10 @@
 
 #############
 # script to unpack the videos into frames
+# - takes the videos from the subfolders of videos
+# - extracts the frames of each video in a folder
+#   in the frame directory with same structure as the
+#   videos directory
 #############
 
 DIR_VIDEOS=videos
