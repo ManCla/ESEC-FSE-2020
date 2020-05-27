@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# ----------------------------------------------------------------- #
+# ----------------- FIX ME ------------------------------------------------ #
 # This script executes the compression case study: it takes all the #
-# mp4 videos placed in the folder "mp4" and process them. The       #
+# mp4 videos placed in the folder "videos" and process them. The       #
 # processing is done in two steps: prepare, and encode.             #
 # The prepare step creates the folder structure needed to execute   #
 # the rest and unpacks the video into frames that are stored in the #
@@ -41,7 +41,7 @@ function ref { # Random Element From
 print_usage ()
 {
   echo "<usage> call this script with parameters for the action:"
-  echo "  ./run.sh input_folder control setpoint_quality"
+  echo "  ./run.sh input_folder control"
   exit
 }
 
@@ -85,11 +85,11 @@ fi
 #####################
 
 # input handling
-INPUTFOLDER=$1 # the subfolder of the directory /${DIR_FRAMES} that you want to
-               # process: it should contain one folder per video each containing
-               # a folder DIR_FRAMES_ORIG with the unprocessed frames. 
+INPUTFOLDER=$1 # the subfolder of the directory /videos that you want to
+               # process: it should be one of 360P, 480P, 720P, 1080P, 2160P
 METHOD=$2      # the adaptation strategy
-QUALITY=$3     # ssim setpoint
+QUALITY= 0.9   # ssim setpoint (an input in the original SAVE artifact,
+               # always set to 0.9 in the ESEC/FSE paper experiments)
 
 # create results directory if needed
 mkdir -p ${DIR_RESULTS}
