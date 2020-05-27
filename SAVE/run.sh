@@ -33,12 +33,6 @@ DIR_RESULTS=results
 DIR_RESULTS_SUMMARY=summary
 PROGRAM=./code/encoder.py
 
-function ref { # Random Element From
-  declare -a array=("$@")
-  r=$((RANDOM % ${#array[@]}))
-  printf "%s\n" "${array[$r]}"
-}
-
 print_usage ()
 {
   echo "<usage> call this script with parameters:"
@@ -110,14 +104,17 @@ for VIDEO in $VIDEOS; do # iterate over the videos
 	# create direcotry for processed frames
 	PROC=${DIR_FRAMES}/${INPUTFOLDER}/${VIDEO}/${DIR_FRAMES_PROC}; mkdir -p ${PROC}
 
-	SIZES=`ls -l ${DIR_FRAMES}/${INPUTFOLDER}/${VIDEO}/${DIR_FRAMES_ORIG} | awk '{print $5}'` 
-	FRAMESIZE_BASE=`ref $SIZES`
-	if test -z "$FRAMESIZE_BASE"
-	then
-		FRAMESIZE_BASE=100000
-	fi
-	FRAMESIZE=`echo "$FRAMESIZE_BASE*0.75 /1" | bc`
-	echo "Setpoints $QUALITY for quality and $FRAMESIZE for framesize"
+	# get size reference from stored ones
+	cd size_references/${METHOD}/${INPUTFOLDER}
+	while IFS=, read -r VID ADAPT QUALITY_REF SIZE_REF  
+		do
+		if [[ $VID == $VIDEO ]]; then
+			FRAMESIZE=$SIZE_REF;
+		fi
+	done < ref.csv
+	cd ../../..
+	
+	echo "Setpoints: $QUALITY for quality and $FRAMESIZE for framesize"
 	# encode the video
 	encode $VIDEO $INPUTFOLDER $METHOD $QUALITY $FRAMESIZE
 
