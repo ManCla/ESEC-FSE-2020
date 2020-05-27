@@ -164,7 +164,7 @@ def main(args):
 	tmp = folder_frame_in.split('/')
 	video_name = tmp[2]
 	folder_name = tmp[1]
-	log_performance_parameter = open('performance_log'+ folder_name +'.csv', 'a')
+	log_performance_parameter = open('results/performance_log_'+ folder_name +'.csv', 'a')
 	log_line_performance = '{video}, {controller}, {target_ssim}, {target_size}, {average_ssim_error}, {average_size_error}'.format(
 			video = video_name , controller = mode , target_ssim = setpoint_quality , target_size = setpoint_compression, average_ssim_error = average_ssim_error, average_size_error = average_size_error)
 	print >>log_performance_parameter, log_line_performance
