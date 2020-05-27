@@ -69,14 +69,6 @@ encode ()
 		$QUALITY $FRAMESIZE
 	echo "  [encode] encoding of $V terminated"
 	
-	echo "  [encode] creating figure"
-	cp ./code/latex/figure.tex $RESULTS/.
-	cd $RESULTS
-	pdflatex figure.tex &>/dev/null
-	pdflatex figure.tex &>/dev/null
-	rm -rf figure.tex figure.aux figure.log
-	cd ../../../..
-	echo "  [encode] creating figure terminated"
 }
 
 
