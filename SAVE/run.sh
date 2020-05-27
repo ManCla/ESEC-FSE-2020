@@ -30,6 +30,7 @@ DIR_FRAMES=frames
 DIR_FRAMES_ORIG=orig
 DIR_FRAMES_PROC=proc
 DIR_RESULTS=results
+DIR_RESULTS_SUMMARY=summary
 PROGRAM=./code/encoder.py
 
 function ref { # Random Element From
@@ -93,13 +94,15 @@ INPUTFOLDER=$1 # the subfolder of the directory /${DIR_FRAMES} that you want to
                # unpacked_360P, unpacked_480P, unpacked_720P, unpacked_1080P, 
                # unpacked_2160P
 METHOD=$2      # the adaptation strategy
-QUALITY= 0.9   # ssim setpoint (an input in the original SAVE artifact,
+QUALITY=0.9    # ssim setpoint (an input in the original SAVE artifact,
                # always set to 0.9 in the ESEC/FSE paper experiments)
 
 # create results directory if needed
 mkdir -p ${DIR_RESULTS}
+mkdir -p ${DIR_RESULTS}/${DIR_RESULTS_SUMMARY}
+mkdir -p ${DIR_RESULTS}/${DIR_RESULTS_SUMMARY}/${METHOD}
 
-VIDEOS=`ls frames/$INPUTFOLDER` # get list of videos to be processed
+VIDEOS=`ls ${DIR_FRAMES}/$INPUTFOLDER` # get list of videos to be processed
 for VIDEO in $VIDEOS; do # iterate over the videos
 	echo "Processing $VIDEO"
 	# create directory for output logging
