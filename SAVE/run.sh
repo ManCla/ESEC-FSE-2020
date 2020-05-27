@@ -40,8 +40,10 @@ function ref { # Random Element From
 
 print_usage ()
 {
-  echo "<usage> call this script with parameters for the action:"
+  echo "<usage> call this script with parameters:"
   echo "  ./run.sh input_folder control"
+  echo "           <input_folder : the subfolder of /frames to process>"
+  echo "           <control : the adaptation strategy for the encoding>"
   exit
 }
 
@@ -85,8 +87,11 @@ fi
 #####################
 
 # input handling
-INPUTFOLDER=$1 # the subfolder of the directory /videos that you want to
-               # process: it should be one of 360P, 480P, 720P, 1080P, 2160P
+INPUTFOLDER=$1 # the subfolder of the directory /${DIR_FRAMES} that you want to
+               # process: it should contain one folder per video each containing
+               # a folder DIR_FRAMES_ORIG with the unprocessed frames. 
+               # unpacked_360P, unpacked_480P, unpacked_720P, unpacked_1080P, 
+               # unpacked_2160P
 METHOD=$2      # the adaptation strategy
 QUALITY= 0.9   # ssim setpoint (an input in the original SAVE artifact,
                # always set to 0.9 in the ESEC/FSE paper experiments)
