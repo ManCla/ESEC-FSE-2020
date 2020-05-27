@@ -123,8 +123,6 @@ for VIDEO in $VIDEOS; do # iterate over the videos
 
 done
 
-mail -s "Finished experiment for folder $INPUTFOLDER" maggio.martina@gmail.com <<< 'I am done, collect my results'
-mail -s "Finished experiment for folder $INPUTFOLDER" claudio.mandrioli@control.lth.se <<< 'I am done, collect my results'
 
 # cleanup
 rm -f ./code/*/*.pyc
