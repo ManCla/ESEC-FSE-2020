@@ -35,7 +35,7 @@ The datased used in the paper is the *User Generated Content* dataset from youtu
 The paper results are reprodiced in three steps: (i) unpacking the videos, (ii) encoding the videos, and (iii) generating the figure. The scripts proces the videos in the 
 
   * The unpacking step is executed by running the shell script *unpack.sh*, in a terminal window execute:
-    > ./unpack.sh \
+    > ./unpack.sh 
     
     The script first creates the firectory *frames*. Then splits the videos in the individual frames into the directory just created. The script mantains the folders structure but changes the subfolder names (unpacked_360P, unpacked_480P, unpacked_720P, unpacked_1080P, unpacked_2160P).
     
