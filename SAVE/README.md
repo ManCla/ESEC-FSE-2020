@@ -35,16 +35,16 @@ The datased used in the paper is the *User Generated Content* dataset from youtu
 The paper results are reprodiced in three steps: (i) unpacking the videos, (ii) encoding the videos, and (iii) generating the figure. The scripts proces the videos in the 
 
   * The unpacking step is executed by running the shell script *unpack.sh*, in a terminal window execute:
-    > ./unpack.sh
+    > ./unpack.sh \
     The script first creates the firectory *frames*. Then splits the videos in the individual frames into the directory just created. The script mantains the folders structure but changes the subfolder names (unpacked_360P, unpacked_480P, unpacked_720P, unpacked_1080P, unpacked_2160P).
     
   * The actual encoding of the videos is performed with the *run.sh* shell script. This script has to be called with two arguments: the target folder (one among: unpacked_360P, unpacked_480P, unpacked_720P, unpacked_1080P, unpacked_2160P) and the adaptation strategy (one among: random, integral, mpc, greedy). The complete dataset is prcessed by executing all the possible cxombinations.
-    > ./run.sh unpacked_360P random
-    > ./run.sh unpacked_360P integral
-    > ...
-    > ./run.sh unpacked_480P random
-    > ./run.sh unpacked_480P integral
-    > ...
+    > ./run.sh unpacked_360P random \
+    > ./run.sh unpacked_360P integral \
+    > ... \
+    > ./run.sh unpacked_480P random \
+    > ./run.sh unpacked_480P integral \
+    > ... \
     
 
 ## Instructions for reuse
