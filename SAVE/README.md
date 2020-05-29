@@ -12,10 +12,10 @@ The directory is organized as follows:
   * The *videos* directory contains a sbuset of the database used in the paper (instructions on how to retrieve and include the complete databse can be found below).
 
 ## System requirements
-The system requirements are the same as the ones for the SAVE artifact. We report them here:
+The system requirements are the same as the ones for the SAVE artifact.\
   **PREREQUISITES:**
 In a normal ubuntu distribution (LTS), you need to install the packages:
-python-imaging, python-numpy, python-scipy, python-matplotlib, python-cvxopt, mplayer, texlive-base, texlive-latex-extra, texlive-pictures.
+python-imaging, python-numpy, python-scipy, python-matplotlib, python-cvxopt, mplayer, texlive-base, texlive-latex-extra, texlive-pictures.\
   **STEP-BY-STEP PREREQUISITES INSTALLATION:**
    > sudo apt-get install mplayer \
    > sudo apt-get install imagemagick \
