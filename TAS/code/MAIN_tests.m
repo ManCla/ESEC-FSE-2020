@@ -17,7 +17,7 @@ num_tests=500;
 num_testset=1;
 
 %% testing conditions (the ones that are the same in all the tests)
-num_providers=[60,20,15];
+num_providers=[60,20,15]; % number of [analysis, drug, ambulance] providers
 adaptation_gain=50;
 advanced=false;
 
