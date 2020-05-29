@@ -10,11 +10,11 @@ In the paper, we formulate the problem of testing a software that adapts itself 
 
 ## Repository structure
 
-The repository has two sub-directories for the two case study presented in the paper: Tele Assistance Servic (TAS) [2] and Self-Adaptive Video Encoder (SAVE) [3]. Note that this repo is self-contained and there is no need to import material from the references below. Also the datasets used in the paper are included.
+The repository has two sub-directories for the two case study presented in the paper: Tele Assistance Servic (TAS) [2] and Self-Adaptive Video Encoder (SAVE) [3].
 
 ## Runnign the two case study
 
-To reproduce the results clone this repository and follow the steps presented in the README files in each of the artifact directories. Both instructions to reproduce the paper results and to re-use the software are included.
+To use the software clone this repository and follow the steps presented in the README files in each of the artifact directories. The README files include both instructions to reproduce the paper results and to re-use the software.
 
 [1] https://en.wikipedia.org/wiki/Scenario_optimization \
 [2] http://homepage.lnu.se/staff/daweaa/TAS/tas.htm \
