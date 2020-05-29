@@ -46,6 +46,7 @@ The paper results are reprodiced in three steps: (i) unpacking the videos, (ii) 
     > ./run.sh unpacked_480P random \
     > ./run.sh unpacked_480P integral \
     > ... 
+    
 Each execution of this script will create the directory *results* (if it doesn't exist yet) and in this directory log the data and results about the encoding. The encoded frames are instead stored in the *frames* folder. In the results directory the summary subdirectory contains the data for the figures and the other subdirectories contain the logging frame by frame (in caso other performance metrics want to be calculated withouth having to re-run the encoding).
 
   * The 
