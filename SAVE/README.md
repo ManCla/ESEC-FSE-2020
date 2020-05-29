@@ -28,9 +28,18 @@ python-imaging, python-numpy, python-scipy, python-matplotlib, python-cvxopt, mp
  > sudo apt-get install texlive-base texlive-pictures \
  > sudo apt-get install texlive-latex-extra \
 
-## Instructions for reproducing the results
+## The dataset
+The datased used in the paper is the *User Generated Content* dataset from youtube[1]: specifically we focused on the sport related videos[2].
 
+## Instructions for reproducing the results
+The paper results are reprodiced in three steps: (i) unpacking the videos, (ii) encoding the videos, and (iii) generating the figure. The scripts proces the videos in the 
+
+  * The unpacking consist 
 
 ## Instructions for reuse
 
-## The dataset
+
+
+
+[1] https://media.withyoutube.com/ \
+[2]
