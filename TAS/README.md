@@ -7,7 +7,7 @@ The directory is divided in two subdirectories:
   * *fig*: the fig directory contains the .tex file generating the paper figure and a makefile scripting the generation process.
 
 ## System requirements
-The simulation is run in Matlab, and will require the statistics and machine learning toolbox. No specific version of Matlab is required.
+The simulation is run in Matlab, and will require the statistics and machine learning toolbox. No specific version of Matlab is required (as long as it is sufficiently recent).
 
 ## Instructions for reproducing the results from the paper
 Two steps are required to reproduce the results presented in the paper: one runnning the simulation of the TAS system and a second one generating the figure found in the paper. 
