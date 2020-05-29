@@ -11,7 +11,7 @@ The directory is organized as follows:
   * The *size_references* directory contains size references for the adaptation algorithm for each of the videos (as explained in the paper, the need for video-specific size reference arises from the significant differences in the frame size).
   * The *videos* directory contains a sbuset of the database used in the paper (instructions on how to retrieve and include the complete databse can be found below).
   
-In the directory are present also the bash scpripts that allow automated processing of the videos (*unpack.sh* and *run.sh*) and generation of the paper images.
+In the directory are present also the bash scpripts that allow automated processing of the videos (*unpack.sh* and *run.sh*) and generation of the paper images (**add script here**).
 
 ## System requirements
 The system requirements are the same as the ones for the SAVE artifact.
@@ -29,7 +29,7 @@ python-imaging, python-numpy, python-scipy, python-matplotlib, python-cvxopt, mp
  > sudo apt-get install texlive-latex-extra 
 
 ## The dataset
-The datased used in the paper is the *User Generated Content* dataset from youtube[1]: specifically we focused on the sport related videos[2], as explained in the paper, those videos are supposed to be very dynamic and will adequately trigger the adaptation of the encoder. The videos are organized in 5 subdirecotries (360P, 480P, 720P, 1080P, 2160P) each containing 31-33 videos. The dataset size is about 5.5Gb for this reason we include in the repository only couple of videos for subfolder. To process the complete dataset you can download it from this link **FIXME** and substitute the videos folder.
+The datased used in the paper is the *User Generated Content* dataset from youtube[1]: specifically we focused on the sport related videos[2], as explained in the paper, those videos are supposed to be very dynamic and will adequately trigger the adaptation of the encoder. The videos are organized in 5 subdirecotries (360P, 480P, 720P, 1080P, 2160P) each containing 31-33 videos. The dataset size is about 5.5Gb for this reason we include in the repository only couple of videos for subfolder. To process the complete dataset you can download it from this link **add link here** and substitute the videos folder.
 
 ## Instructions for reproducing the results
 The paper results are reprodiced in three steps: (i) unpacking the videos, (ii) encoding the videos, and (iii) generating the figure. The scripts proces the videos in the 
@@ -46,10 +46,11 @@ The paper results are reprodiced in three steps: (i) unpacking the videos, (ii) 
     > ./run.sh unpacked_480P random \
     > ./run.sh unpacked_480P integral \
     > ... 
-    
+Each execution of this script will create the directory *results* (if it doesn't exist yet) and in this directory log the data and results about the encoding. The encoded frames are instead stored in the *frames* folder. In the results directory the summary subdirectory contains the data for the figures and the other subdirectories contain the logging frame by frame (in caso other performance metrics want to be calculated withouth having to re-run the encoding).
+
+  * The 
 
 ## Instructions for reuse
-
 
 
 
