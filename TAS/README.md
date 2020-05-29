@@ -8,7 +8,7 @@ The directory is divided in two subdirectories:
 ## System requirements
 The simulation is run in Matlab, and will require the statistics and machine learning toolbox. No specific version of Matlab is required.
 
-## Instructions for reproducing the results
+## Instructions for reproducing the results from the paper
 Two steps are required to reproduce the results presented in the paper: one runnning the simulation of the TAS system and a second one generating the figure found in the paper. 
 
  * In matlab run the script MAIN_tests.m in the /TAS/code directory. The script will sequentially: **(i)** load testing parameters, **(ii)** perform perform the tests (printing out the progress every 100 tests), **(iii)** generate the file maxima_growth_plot.csv in the /TAS/fig directory, and **(iv)** display two plots sumarizing the results.
