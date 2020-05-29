@@ -22,9 +22,7 @@ function services = initialize_services(number)
 
 max_capacity=5;
 failure_probabilities=[0.5,0.5,0.5,0.1,0.1,0.1,0.05,0.02,0.02,0.01];
-%failure_probabilities=[0.05,0.02,0.02,0.0001,0.0001];
 down_probabilities=[0.05,0.05,0.01,0.01,0.001];
-%execution_times=[2,3,3,4,7];
 execution_time=[4];
 
 for i=1:number
