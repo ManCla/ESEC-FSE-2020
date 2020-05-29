@@ -1,10 +1,8 @@
 # ESEC-FSE-2020
 This repository complements the paper: 
 
-  "*Testing Self-Adaptive Software with Probabilistic Guarantees on Performance Metrics*"
-  
-  Claudio Mandrioli, Martina Maggio
-  
+  "*Testing Self-Adaptive Software with Probabilistic Guarantees on Performance Metrics*" \
+  Claudio Mandrioli, Martina Maggio \
   European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE) 2020
 
 ## Short paper sumary
