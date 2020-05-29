@@ -17,7 +17,7 @@ Two steps are required to reproduce the results presented in the paper: one runn
 ## Instructions for reuse
 In the file MAIN_tests.m test number and the simulation parameters can be tweaked. 
 
-  * At line 13 and 17 the number of tests can be changed. In the paper we used only one testset but the script allows to run several. The idea is that by comparing different randomly generated testsets we can evaluate the stability of the testing strategy.  Meaning that a testing strategy to be considered stable should provide similar results for different testsets. A number of tests different than one will also change the displayed plots summarizing the results.
+  * At line 13 and 17 the number of tests can be changed. In the paper we used only one testset but the script allows to run several. The idea is that by comparing different randomly generated testsets we can evaluate the stability of the testing strategy.  Meaning that a testing strategy to be considered stable should provide similar results for different testsets. A number of tests different than one will also change the plots displayed to summarize the results.
 
   * At lines 20, 21, and 22 can be changed the number of service providers (for each of the services).
 
