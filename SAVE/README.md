@@ -6,6 +6,8 @@ The original artifact has been slightly modified for easing test automation and 
 
 ## Directory structure and content
 
+## System requirements
+
 ## Instructions for reproducing the results
 
 ## Instructions for reuse
