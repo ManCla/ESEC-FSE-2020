@@ -17,8 +17,8 @@ The system requirements are the same as the ones for the SAVE artifact. We repor
 In a normal ubuntu distribution (LTS), you need to install the packages:
 python-imaging, python-numpy, python-scipy, python-matplotlib, python-cvxopt, mplayer, texlive-base, texlive-latex-extra, texlive-pictures.
   **STEP-BY-STEP PREREQUISITES INSTALLATION:**
-   > sudo apt-get install mplayer
-   > sudo apt-get install imagemagick
+   > sudo apt-get install mplayer \
+   > sudo apt-get install imagemagick \
    > sudo apt-get install python-imaging python-numpy python-scipy
    > sudo apt-get install python-matplotlib python-cvxopt
    > sudo apt-get install texlive-base texlive-pictures
