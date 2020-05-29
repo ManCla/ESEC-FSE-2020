@@ -31,12 +31,21 @@ python-imaging, python-numpy, python-scipy, python-matplotlib, python-cvxopt, mp
 ## The dataset
 The datased used in the paper is the *User Generated Content* dataset from youtube[1]: specifically we focused on the sport related videos[2], as explained in the paper, those videos are supposed to be very dynamic and will adequately trigger the adaptation of the encoder. The videos are organized in 5 subdirecotries (360P, 480P, 720P, 1080P, 2160P) each containing 31-33 videos. The dataset size is about 5.5Gb for this reason we include in the repository only couple of videos for subfolder. To process the complete dataset you can download it from this link **FIXME** and substitute the videos folder.
 
-Since the videos add up to about 5.5Gb we 
-
 ## Instructions for reproducing the results
 The paper results are reprodiced in three steps: (i) unpacking the videos, (ii) encoding the videos, and (iii) generating the figure. The scripts proces the videos in the 
 
-  * The unpacking consist 
+  * The unpacking step is executed by running the shell script *unpack.sh*, in a terminal window execute:
+    > ./unpack.sh
+    The script first creates the firectory *frames*. Then splits the videos in the individual frames into the directory just created. The script mantains the folders structure but changes the subfolder names (unpacked_360P, unpacked_480P, unpacked_720P, unpacked_1080P, unpacked_2160P).
+    
+  * The actual encoding of the videos is performed with the *run.sh* shell script. This script has to be called with two arguments: the target folder (one among: unpacked_360P, unpacked_480P, unpacked_720P, unpacked_1080P, unpacked_2160P) and the adaptation strategy (one among: random, integral, mpc, greedy). The complete dataset is prcessed by executing all the possible cxombinations.
+    > ./run.sh unpacked_360P random
+    > ./run.sh unpacked_360P integral
+    > ...
+    > ./run.sh unpacked_480P random
+    > ./run.sh unpacked_480P integral
+    > ...
+    
 
 ## Instructions for reuse
 
