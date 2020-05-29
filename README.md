@@ -16,8 +16,6 @@ The repository has two sub-directories for the two case study presented in the p
 
 To reproduce the results clone this repository and follow the steps presented in the README files in each of the artifact directories. Both instructions to reproduce the paper results and to re-use the software are included.
 
-[1] https://en.wikipedia.org/wiki/Scenario_optimization
-
-[2] http://homepage.lnu.se/staff/daweaa/TAS/tas.htm
-
+[1] https://en.wikipedia.org/wiki/Scenario_optimization \
+[2] http://homepage.lnu.se/staff/daweaa/TAS/tas.htm \
 [3] http://www.martinamaggio.com/main/publications/seams17/
