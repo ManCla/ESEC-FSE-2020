@@ -29,7 +29,7 @@ python-imaging, python-numpy, python-scipy, python-matplotlib, python-cvxopt, mp
  > sudo apt-get install texlive-latex-extra 
 
 ## The dataset
-The datased used in the paper is the *User Generated Content* dataset from youtube[1]: specifically we focused on the sport related videos[2], as explained in the paper, those videos are supposed to be very dynamic and will adequately trigger the adaptation of the encoder. The videos are organized in 5 subdirecotries (360P, 480P, 720P, 1080P, 2160P) each containing 31-33 videos. The dataset size is about 5.5Gb for this reason we include in the repository only couple of videos for subfolder. To process the complete dataset you can download it from this link **add link here** and substitute the videos folder.
+The datased used in the paper is the *User Generated Content* dataset from youtube[1]: specifically we focused on the sport related videos[2], as explained in the paper, those videos are supposed to be very dynamic and will adequately trigger the adaptation layer in the encoder. The videos are organized in 5 subdirecotries (360P, 480P, 720P, 1080P, 2160P) each containing 31-33 videos. The dataset size is about 5.5Gb for this reason we include in the repository only couple of videos for subfolder. To process the complete dataset you can download it from this link **add link here** and substitute the videos folder.
 
 ## Instructions for reproducing the results
 The paper results are reprodiced in three steps: (i) unpacking the videos, (ii) encoding the videos, and (iii) generating the figure. The scripts proces the videos in the 
