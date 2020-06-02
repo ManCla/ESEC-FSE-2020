@@ -54,7 +54,8 @@ The paper results are reprodiced in three steps: (i) unpacking the videos, (ii) 
   
     If no argument is passed the script will look for the results in the directory *results/summary*. Calling instead the script with the argument **precomputed** will instead use the precomuted results from the directory *final_results*.
     > ./figure.sh precomputed
-  
+    
+    The figure is generated as a pdf file in the *fig* directory.
 
 ## Instructions for reuse
 
