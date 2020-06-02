@@ -58,7 +58,9 @@ The paper results are reprodiced in three steps: (i) unpacking the videos, (ii) 
     The figure is generated as a pdf file in the *fig* directory.
 
 ## Instructions for reuse
+To test the system on a different testset simply add a folder containing the videos of interest in the *videos* directory. Whe you call the script *run.sh* to encode the videos pass as a first argument the name of the added folder with **unpacked_** in front of it. 
 
+Instead to add a different control strategy to the SAVE artifact you can follow the instructions from the associated [paper](http://www.martinamaggio.com/main/wp-content/uploads/2017/08/seams17_paper.pdf). And then call the *run.sh* script with the name associated to the new adaptation strategy.
 
 
 [1] https://media.withyoutube.com/ \
