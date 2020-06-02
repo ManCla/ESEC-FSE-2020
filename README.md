@@ -12,7 +12,7 @@ In the paper, we formulate the problem of testing a software that adapts itself 
 
 The repository has two sub-directories for the two case study presented in the paper: Tele Assistance Servic (TAS) [2] and Self-Adaptive Video Encoder (SAVE) [3].
 
-## Runnign the two case study
+## Running the two case study
 
 To use the software clone this repository and follow the steps presented in the README files in each of the artifact directories. The README files include both instructions to reproduce the paper results and to re-use the software.
 
