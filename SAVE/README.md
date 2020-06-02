@@ -1,5 +1,5 @@
 # SAVE case study 
-This direcotry contains the SAVE artifact with the data used in the paper and the scripts to generate the paper results. Since processing the whole dataset can take long time (up to one week, depending on the machine that is used) also the final results showed in the paper are included for convenience.
+This direcotry contains the SAVE artifact with a subset of the data used in the paper and the scripts to generate the paper results. Since processing the whole dataset can take long time (up to one week, depending on the machine that is used) also the final results showed in the paper are included for convenience.
 
 This directory is a copy of the original artifact that has been modified for easing test automation and result logging.
 
