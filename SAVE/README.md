@@ -52,8 +52,8 @@ The paper results are reprodiced in three steps: (i) unpacking the videos, (ii) 
   * The figure can be generated running from the terminal the script *figure.sh*. 
     > ./figure.sh
   
-    If no argument is passed the script will look for the results in the directory *results/summary*. Calling instead the script with the argument precomputed will instead use the precomuted results from the directory *final_results*.
-  > ./figure.sh precomputed
+    If no argument is passed the script will look for the results in the directory *results/summary*. Calling instead the script with the argument **precomputed** will instead use the precomuted results from the directory *final_results*.
+    > ./figure.sh precomputed
   
 
 ## Instructions for reuse
