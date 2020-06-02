@@ -11,7 +11,7 @@ The directory is organized as follows:
   * The *size_references* directory contains size references for the adaptation algorithm for each of the videos (as explained in the paper, the need for video-specific size reference arises from the significant differences in the frame size).
   * The *videos* directory contains a subset of the database used in the paper (instructions on how to retrieve and include the complete databse can be found below).
   
-In the directory are present also the bash scpripts that allow automated processing of the videos (*unpack.sh* and *run.sh*) and generation of the paper images (**add script here**).
+In the directory are present also the bash scpripts that allow automated processing of the videos (*unpack.sh* and *run.sh*) and generation of the paper images (**add script name here**).
 
 ## System requirements
 The system requirements are the same as the ones for the SAVE artifact.
