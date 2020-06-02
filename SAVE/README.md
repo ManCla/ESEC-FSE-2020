@@ -47,12 +47,12 @@ The paper results are reprodiced in three steps: (i) unpacking the videos, (ii) 
     > ./run.sh unpacked_480P integral \
     > ... 
     
-Each execution of this script will create the directory *results* (if it doesn't exist yet) and in this directory log the data and results about the encoding. The encoded frames are instead stored in the *frames* folder. In the results directory the summary subdirectory contains the data for the figures and the other subdirectories contain the logging frame by frame (in caso other performance metrics want to be calculated withouth having to re-run the encoding).
+    Each execution of this script will create the directory *results* (if it doesn't exist yet) and in this directory log the data and results about the encoding. The encoded frames are instead stored in the *frames* folder. In the results directory the summary subdirectory contains the data for the figures and the other subdirectories contain the logging frame by frame (in caso other performance metrics want to be calculated withouth having to re-run the encoding).
 
   * The figure can be generated running from the terminal the script *figure.sh*. 
-  > ./figure.sh
+    > ./figure.sh
   
-If no argument is passed the script will look for the results in the directory *results/summary*. Calling instead the script with the argument precomputed will instead use the precomuted results from the directory *final_results*.
+    If no argument is passed the script will look for the results in the directory *results/summary*. Calling instead the script with the argument precomputed will instead use the precomuted results from the directory *final_results*.
   > ./figure.sh precomputed
   
 
