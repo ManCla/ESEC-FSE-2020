@@ -1,9 +1,6 @@
-\documentclass[preview,border={10pt 10pt 1000pt 10pt}]{standalone}
+\documentclass{standalone}
 
 \usepackage{tikz,pgfplots}
-\usepackage{amsmath}
-\usepackage{setspace}
-\usepackage{caption}
 
 %%%%%% TIKZ STUFF %%%%%%
 \usetikzlibrary{arrows}
@@ -17,23 +14,17 @@
 \pgfplotsset{grid style = {dashed, black!10}}
 \pgfplotsset{grid style = {dashed, black!20}}
 
-% to draw blocks in block diagrams
-\tikzstyle{block} = [draw, rectangle, 
-    minimum height=3.8em, minimum width=6em, style={align=center}]
 
 %% MAIN COLOUR FOR THE PAPER
-%\definecolor{awesome}{rgb}{0.84, 0.04, 0.33}
 \definecolor{awesome}{rgb}{1, 0, 0}
 
 \begin{document}
 
-\begin{figure}%
-\vspace{-2mm}
-\begin{tikzpicture}[scale=1.0]
+\begin{tikzpicture}
 \begin{groupplot}[
 group style = {group size = 2 by 4, horizontal sep=1cm, vertical sep=0.5cm},
-height=2.8cm,
-width=\columnwidth,
+height=4cm,
+width=15cm,
 grid=both,
 ymin=0,ymax=85,
 xmin=0,
@@ -173,9 +164,8 @@ x tick label style={/pgf/number format/.cd,%
 %info box
 \node[draw, fill=white] at (axis cs: 150000,50) {Avg 1885, Max 35191};
 \end{groupplot}
+\node at (14,-10) {SAVE adaptation over the Youtube dataset with different techniques: Random, MPC, Integral, and $\epsilon$-Greedy.};
 \end{tikzpicture}
 
-\caption*{SAVE adaptation over the Youtube dataset with different techniques: Random, MPC, Integral, and $\epsilon$-Greedy.\vspace{1.3mm}}
-\end{figure}
 
 \end{document}
