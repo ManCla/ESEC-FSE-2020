@@ -18,7 +18,7 @@ To use the software clone this repository and follow the steps presented in the 
 
 ## Repository availability
 
-The artifact is meant to be open and accessible in the long term. For this reason it is available also in the more long-term service Zenodo under the  DOI: [![DOI:10.5281/zenodo.3896795](https://zenodo.org/record/3896795#.XujNkNFS-EI) .
+The artifact is meant to be open and accessible in the long term. For this reason it is available also in the more long-term service Zenodo under the  DOI: [![DOI:10.5281/zenodo.3896795](https://zenodo.org/record/3896795#.XujNkNFS-EI)] .
 
 [1] https://en.wikipedia.org/wiki/Scenario_optimization \
 [2] http://homepage.lnu.se/staff/daweaa/TAS/tas.htm \
