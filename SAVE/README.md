@@ -39,7 +39,7 @@ The paper results are reprodiced in three steps: (i) unpacking the videos, (ii) 
   * The unpacking step is executed by the shell script *unpack.sh*, in can be run from a terminal window with the command:
     > ./unpack.sh 
     
-    The script first creates the firectory *frames*. Then splits the videos in the individual frames into the directory just created. The script mantains the folders structure but changes the subfolder names (unpacked_360P, unpacked_480P, unpacked_720P, unpacked_1080P, unpacked_2160P).
+    The script first creates the firectory *frames*. Then splits the videos in the individual frames into the directory just created. The script mantains the folders structure but changes the subfolder names (unpacked_360P, unpacked_480P, unpacked_720P, unpacked_1080P, unpacked_2160P). NOTE: this will take some time (significantly depending on the number and duration of the videos).
     
   * The actual encoding of the videos is performed with the *run.sh* shell script. This script has to be called with two arguments: the target folder (one among: unpacked_360P, unpacked_480P, unpacked_720P, unpacked_1080P, unpacked_2160P) and the adaptation strategy (one among: random, integral, mpc, greedy). The complete dataset is prcessed by executing all the possible combinations.
     > ./run.sh unpacked_360P random \
