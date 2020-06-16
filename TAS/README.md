@@ -3,7 +3,7 @@ In this directory contains the files related to the Tele-Assistance Service case
 
 ## Directory structure and content
 The directory is divided in two subdirectories:
-  * *code*: the code directory contains the matlab funcitons and scripts that implement the simulator.
+  * *code*: the code directory contains the matlab functions and scripts that implement the simulator.
   * *fig*: the fig directory contains the .tex file generating the paper figure and a makefile scripting the generation process.
 
 ## System requirements
