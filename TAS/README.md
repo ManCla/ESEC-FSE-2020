@@ -12,7 +12,7 @@ The simulation is run in Matlab, and will require the statistics and machine lea
 ## Instructions for reproducing the results from the paper
 Two steps are required to reproduce the results presented in the paper: one runnning the simulation of the TAS system and a second one generating the figure found in the paper. 
 
- * In matlab run the script MAIN_tests.m in the /TAS/code directory. The script will sequentially: **(i)** load testing parameters, **(ii)** perform perform the tests (printing out the progress every 100 tests), **(iii)** generate the file maxima_growth_plot.csv in the /TAS/fig directory, and **(iv)** display two plots sumarizing the results.
+ * Open matlab and navigate to the */TAS/code* directory. From there you can run the script MAIN_tests.m . The script will sequentially: **(i)** load testing parameters, **(ii)** perform perform the tests (printing out the progress every 100 tests), **(iii)** generate the file maxima_growth_plot.csv in the /TAS/fig directory, and **(iv)** display two plots sumarizing the results.
  * To generate figure 3 from the paper you can now run the makefile in the directory /TAS/fig (latex and tikz are required). This requires the file maxima_growth_plot.csv so the matlab script has to be run before this step.
 
 ## Instructions for reuse
