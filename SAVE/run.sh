@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# ----------------- FIX ME ------------------------------------------------ #
+# ----------------- FIX ME ---------------------------------------- #
 # This script executes the compression case study: it takes all the #
-# mp4 videos placed in the folder "videos" and process them. The       #
+# mp4 videos placed in the folder "videos" and process them. The    #
 # processing is done in two steps: prepare, and encode.             #
 # The prepare step creates the folder structure needed to execute   #
 # the rest and unpacks the video into frames that are stored in the #
@@ -32,6 +32,12 @@ DIR_FRAMES_PROC=proc
 DIR_RESULTS=results
 DIR_RESULTS_SUMMARY=summary
 PROGRAM=./code/encoder.py
+
+function ref { # Random Element From
+  declare -a array=("$@")
+  r=$((RANDOM % ${#array[@]}))
+  printf "%s\n" "${array[$r]}"
+}
 
 print_usage ()
 {
@@ -104,15 +110,26 @@ for VIDEO in $VIDEOS; do # iterate over the videos
 	# create direcotry for processed frames
 	PROC=${DIR_FRAMES}/${INPUTFOLDER}/${VIDEO}/${DIR_FRAMES_PROC}; mkdir -p ${PROC}
 
-	# get size reference from stored ones
-	cd size_references/${METHOD}/${INPUTFOLDER}
-	while IFS=, read -r VID ADAPT QUALITY_REF SIZE_REF  
-		do
-		if [[ $VID == $VIDEO ]]; then
-			FRAMESIZE=$SIZE_REF;
-		fi
-	done < ref.csv
-	cd ../../..
+    if [ 1 = 2 ]; then # use references as in paper or picking a new one from a random frame
+	    # get size reference from stored ones
+	    cd size_references/${METHOD}/${INPUTFOLDER}
+	    while IFS=, read -r VID ADAPT QUALITY_REF SIZE_REF  
+		    do
+		    if [[ $VID == $VIDEO ]]; then
+			    FRAMESIZE=$SIZE_REF;
+		    fi
+	    done < ref.csv
+	    cd ../../..
+    else
+        # get size reference from random frame of video
+        SIZES=`ls -l ${DIR_FRAMES}/${INPUTFOLDER}/${VIDEO}/${DIR_FRAMES_ORIG} | awk '{print $5}'` 
+        FRAMESIZE_BASE=`ref $SIZES`
+	    if test -z "$FRAMESIZE_BASE"
+	    then
+		    FRAMESIZE_BASE=100000
+	    fi
+	    FRAMESIZE=`echo "$FRAMESIZE_BASE*0.75 /1" | bc`
+    fi
 	
 	echo "Setpoints: $QUALITY for quality and $FRAMESIZE for framesize"
 	# encode the video
